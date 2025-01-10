@@ -43,7 +43,7 @@ export default function SignUp() {
     try {
       console.log("Form Data:", formData);
       const response = await fetch(
-        "http://http://13.60.67.248/:5000/auth/login",
+        "http://http://13.60.67.248:5000/auth/login",
         {
           method: "POST",
           headers: {

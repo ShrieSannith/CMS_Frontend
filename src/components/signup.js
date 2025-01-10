@@ -104,7 +104,7 @@ export default function SignUp() {
 
     try {
       const response = await fetch(
-        "http://http://13.60.67.248/:5000/user/register",
+        "http://http://13.60.67.248:5000/user/register",
         {
           method: "POST",
           headers: {
