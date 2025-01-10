@@ -1,0 +1,2 @@
+# Ignore the 'jwt-decode' package in node_modules
+node_modules/jwt-decode
