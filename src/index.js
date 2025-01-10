@@ -1,18 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import App from './App';
-import Signinpage from './pages/login.js';
-import Signuppage from './pages/signup.js';
-import IssueFormPage from './pages/issueForm.js';
-import LogsPage from './pages/logsPage.js';
-import DisplayPage from './pages/displayForm.js';
+import App from "./App";
+import Signinpage from "./pages/login.js";
+import Signuppage from "./pages/signup.js";
+import IssueFormPage from "./pages/issueForm.js";
+import LogsPage from "./pages/logsPage.js";
+import DisplayPage from "./pages/displayForm.js";
 
 const router = createBrowserRouter([
   {
@@ -41,9 +38,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <RouterProvider router={router} />
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<RouterProvider router={router} />);
 
 reportWebVitals();
