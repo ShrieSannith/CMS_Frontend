@@ -14,7 +14,7 @@ jobs:
       - name: Login to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker Image
-        run: docker build -t shriesannithn/cms_frontend
+        run: docker build -t shriesannithn/cms_frontend --build-arg REACT_APP_NODE_ENV='production' --build-arg REACT_APP_SERVER_BASE_URL='${{ secrets.REACT_APP_SERVER_BASE_URL }}'  .
       - name: Publish Image to Docker Hub
         run: docker push shriesannithn/cms_frontend:latest
 
@@ -27,4 +27,4 @@ jobs:
       - name: Delete Old Container
         run: docker rm -f reactjs-app-container || true
       - name: Run Docker Container
-        run: docker run -d -p 5000:5000 --name reactjs-app-container shriesannithn/cms_frontend
+        run: docker run -d -p 3000:80 --name reactjs-app-container shriesannithn/cms_frontend
