@@ -103,16 +103,13 @@ export default function SignUp() {
     if (hasError) return;
 
     try {
-      const response = await fetch(
-        "http://http://13.60.67.248:5000/user/register",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("http://13.60.67.248:5000/user/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       const result = await response.json();
       console.log(result);
